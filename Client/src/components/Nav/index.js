@@ -1,4 +1,5 @@
 import React from "react";
+import {logo} from "../../images/logo.png"
 
 function Nav() {
   return (
@@ -6,7 +7,7 @@ function Nav() {
       <div className="navbar-brand">
         <a className="navbar-item" href="https://bulma.io">
           <img
-            src="https://bulma.io/images/bulma-logo.png"
+            src={logo}
             width="112"
             height="28"
           />
