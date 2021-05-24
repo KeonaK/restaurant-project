@@ -16,9 +16,9 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          {/* <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Landing} />
           <Route exact path="/landing" component={Landing} />
-          <Route exact path="/restaurant-project" component={Landing} /> */}
+          <Route exact path="/restaurant-project" component={Landing} /> 
           <Route exact path="/order" componenet={Ordering} />
           {/* <Route exact path="/sign-up" component={SignUp} /> */}
           <Route exact path="/login" component={Login} />
