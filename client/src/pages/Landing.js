@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react'
 
-let Landing = React.createClass({
-    render: function() {
-      return (
+function Landing() {
+    return (
         <div>
-          function Landing(){'{'}
-          return (
-          <section classname="hero is-primary">
+            <section classname="hero is-primary">
             <div classname="hero-body">
               <p className="title">
                 A La Leña
@@ -22,11 +19,9 @@ let Landing = React.createClass({
              Create an account to order online.
             </h2>
           </section>
-          )
-          {'}'};
         </div>
-      );
-    }
-  });
+    )
+}
 
-  export default Landing;
+export default Landing;
+
