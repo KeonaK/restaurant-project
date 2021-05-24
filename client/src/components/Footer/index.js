@@ -13,7 +13,7 @@ function Footer() {
               href="https://www.github.com/KeonaK"
             >
               Keona Kirby
-            </a>
+            </a>{" "}
             <a
               target="_blank"
               rel="noreferrer"
