@@ -7,6 +7,7 @@ import SignUp from "../src/pages/SignUp";
 import Login from "../src/pages/Login";
 import Checkout from "../src/pages/Checkout";
 import NoMatch from "../src/pages/NoMatch";
+import Footer from "../src/components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -15,13 +16,13 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Landing} />
+          {/* <Route exact path="/" component={Landing} />
           <Route exact path="/landing" component={Landing} />
-          <Route exact path="/restaurant-project" component={Landing} />
+          <Route exact path="/restaurant-project" component={Landing} /> */}
           <Route exact path="/order" componenet={Ordering} />
-          <Route exact path="/sign-up" component={SignUp} />
+          {/* <Route exact path="/sign-up" component={SignUp} /> */}
           <Route exact path="/login" component={Login} />
-          <Route exact path="/checkout" component={Checkout} />
+          {/* <Route exact path="/checkout" component={Checkout} /> */}
           <Route component={NoMatch} />
         </Switch>
 
