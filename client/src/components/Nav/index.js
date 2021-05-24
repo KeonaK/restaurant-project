@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
+import { Icon, InlineIcon } from "@iconify/react";
+import shoppingCart from "@iconify/icons-fa-solid/shopping-cart";
 
 function Nav() {
   return (
@@ -38,6 +40,17 @@ function Nav() {
               </Link>
               <Link className="button is-light" to="/sign-up">
                 Create account
+              </Link>
+              <Link to="/checkout">
+                <span class="icon-text ">
+                  <span class="icon">
+                    <Icon
+                      icon={shoppingCart}
+                      style={{ color: "black", fontSize: "20px" }}
+                    />
+                  </span>
+                  <span>0</span>
+                </span>
               </Link>
             </div>
           </div>
