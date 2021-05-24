@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Ordering(props) {
   return (
@@ -100,14 +101,16 @@ function Ordering(props) {
             </header>
             <div className="card-content">
               <div className="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
+                <p>Size:</p>
+                <p>Toppings:</p>
+                <p>Dough:</p>
+                <p>$</p>
               </div>
             </div>
             <footer className="card-footer">
-              <a href="#" className="card-footer-item">
+              <Link to="/checkout" className="card-footer-item">
                 Add
-              </a>
+              </Link>
             </footer>
           </div>
         </div>
