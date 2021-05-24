@@ -19,7 +19,7 @@ function Login() {
           <input className="input" type="password" placeholder="********" />
         </div>
       </div>
-      <button className="button is-primary">Sign in</button>
+      <button className="button is-primary">Submit</button>
     </form>
   );
 }

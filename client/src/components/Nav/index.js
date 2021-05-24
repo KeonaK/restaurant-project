@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 
 function Nav() {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <Link className="navbar-item" to="/">
           <img src={logo} width="112" height="28" alt="logo" />
-        </a>
+        </Link>
 
         <a
           role="button"
@@ -32,10 +33,12 @@ function Nav() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-primary">
+              <Link className="button is-primary" to="/login">
                 <strong>My account</strong>
-              </a>
-              <a className="button is-light">Order Online</a>
+              </Link>
+              <Link className="button is-light" to="/sign-up">
+                Create account
+              </Link>
             </div>
           </div>
         </div>
