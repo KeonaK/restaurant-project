@@ -14,7 +14,7 @@ const customerSeed = [
   {
     name: "Greg Olson",
     cc:"xxx-xxx-xxxx" ,
-    exp: "05/23"
+    exp: "05/23",
     
     
     date: new Date(Date.now()),
@@ -22,7 +22,7 @@ const customerSeed = [
   {
     name: "Scarlet Johanson",
     cc:"xxx-xxx-xxxx" ,
-    exp: "12/31"
+    exp: "12/31",
     
     date: new Date(Date.now()),
   },

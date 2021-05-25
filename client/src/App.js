@@ -25,6 +25,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Rotue exact path="/credit" component={Credit} />
           {/* <Route exact path="/checkout" component={Checkout} /> */}
+          <Route exact path="/checkout" component={Checkout} />
           <Route component={NoMatch} />
         </Switch>
 
