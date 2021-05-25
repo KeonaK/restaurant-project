@@ -9,6 +9,7 @@ import Checkout from "../src/pages/Checkout";
 import NoMatch from "../src/pages/NoMatch";
 import Footer from "../src/components/Footer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import PizzaView from "../src/pages/PizzaView";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/restaurant-project" component={Landing} />
+          <Route exact path="/pizza/:id" component={PizzaView} />
           <Route exact path="/order" component={Ordering} />
           <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/login" component={Login} />

@@ -1,20 +1,19 @@
 import React from "react";
+import Pizzas from "../components/Pizzas";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Pizzas from "../components/Pizzas";
-//renaming get pizza
 import { getPizzaRequest as listPizzas } from "../redux/actions/pizzaActions";
 
 function Ordering() {
   const dispatch = useDispatch();
-  //get the pizza request from the store
+
   const getPizzaRequest = useSelector((state) => state.getPizzaRequest);
-  //get pizza array
   const { pizzas, loading, error } = getPizzaRequest;
-  //when the page loads we wants to make a dispatch to list the pizzas
+
   useEffect(() => {
     dispatch(listPizzas());
   }, [dispatch]);
+
   return (
     <div>
       <section className="hero is-danger is-fullheight">
@@ -24,9 +23,9 @@ function Ordering() {
           <div className="select is-normal">
             <select>
               <option>Pizza Size</option>
-              <option value="12">12"</option>
-              <option value="16">16"</option>
-              <option value="18">18"</option>
+              <option>12"</option>
+              <option>16"</option>
+              <option>18"</option>
             </select>
           </div>
           <h4>Toppings</h4>
@@ -90,19 +89,28 @@ function Ordering() {
           <div className="select is-normal">
             <select>
               <option>Cheese</option>
-              <option value="mozzarella">Mozzarella</option>
-              <option value="goat cheese">Goat Cheese</option>
+              <option>Mozzarella</option>
+              <option>Goat Cheese</option>
             </select>
           </div>
           <div className="select is-normal">
             <select>
               <option>Dough</option>
-              <option value="gluten">Gluten</option>
-              <option value="gluten">Gluten-Free</option>
+              <option>Glutten</option>
+              <option>Glutten-Free</option>
             </select>
           </div>
+
           <div className="subtitle">Chef's Selections</div>
-          <Pizzas />
+          <div>
+            {loading ? (
+              <h2>Loading...</h2>
+            ) : error ? (
+              <h2>{error}</h2>
+            ) : (
+              pizzas.map((pizza) => <Pizzas />)
+            )}
+          </div>
         </div>
       </section>
     </div>

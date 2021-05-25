@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import trashSharp from "@iconify/icons-ion/trash-sharp";
 
 const CartItem = ({ item, qtyChangeHandler, removeHandler }) => {
