@@ -42,8 +42,8 @@ function Nav() {
                 Create account
               </Link>
               <Link to="/checkout">
-                <span class="icon-text ">
-                  <span class="icon">
+                <span className="icon-text ">
+                  <span className="icon">
                     <Icon
                       icon={shoppingCart}
                       style={{ color: "black", fontSize: "20px" }}
