@@ -103,13 +103,17 @@ function Ordering() {
 
           <div className="subtitle">Chef's Selections</div>
           <div>
-            {loading ? (
-              <h2>Loading...</h2>
-            ) : error ? (
-              <h2>{error}</h2>
-            ) : (
-              pizzas.map((pizza) => <Pizzas />)
-            )}
+            {pizzas.map((pizza) => (
+              <Pizzas
+                key={pizza._id}
+                type={pizza.type}
+                toppings={pizza.toppings}
+                size={pizza.size}
+                gluten={pizza.gluten}
+                price={pizza.price}
+                pizzaId={pizza._id}
+              />
+            ))}
           </div>
         </div>
       </section>

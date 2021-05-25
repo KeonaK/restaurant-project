@@ -24,7 +24,7 @@ function Checkout() {
                     <strong>TOTAL</strong> (0) $
                   </p>
                 </div>
-                <Link to="/card">
+                <Link to="/cards">
                   <button
                     type="submit"
                     className="button is-link is-fullwidth has-text-weight-medium is-medium"

@@ -65,8 +65,8 @@ const pizzaSeed = [
   },
 ];
 
-db.Post.remove({})
-  .then(() => db.Post.collection.insertMany(pizzaSeed))
+db.Pizza.remove({})
+  .then(() => db.Pizza.collection.insertMany(pizzaSeed))
   .then((data) => {
     console.log(data.result.n + "order inserted!");
     process.exit(0);

@@ -8,9 +8,8 @@ import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import NoMatch from "./pages/NoMatch";
 import Footer from "./components/Footer";
-import Cards from "./components/Cards"
+import Cards from "./components/Cards";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import PizzaView from "../src/pages/PizzaView";
 
 function App() {
   return (
@@ -21,7 +20,6 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/restaurant-project" component={Landing} />
-          <Route exact path="/pizza/:id" component={PizzaView} />
           <Route exact path="/order" component={Ordering} />
           <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/login" component={Login} />

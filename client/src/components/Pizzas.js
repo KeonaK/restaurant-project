@@ -1,7 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart } from "../redux/actions/cartActions";
+import { getPizzaDetails } from "../redux/actions/pizzaActions";
 
-const Pizzas = ({ type, toppings, size, price, gluten, pizzaId }) => {
+function Pizzas({ type, toppings, size, price, gluten, match, history }) {
+  const [qty, setQty] = useState(1);
+  const dispatch = useDispatch();
+
+  const pizzaDetails = useSelector((state) => state.getPizzaDetails);
+  const { loading, error, pizza } = pizzaDetails;
+
+  useEffect(() => {
+    if (pizza && match.params.id !== pizza._id) {
+      dispatch(getPizzaDetails(match.params.id));
+    }
+  }, [dispatch, match, pizza]);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(pizza._id, qty));
+    history.push(`/checkout`);
+  };
   return (
     <div>
       <div className="card">
@@ -32,14 +52,13 @@ const Pizzas = ({ type, toppings, size, price, gluten, pizzaId }) => {
           </div>
         </div>
         <footer className="card-footer">
-          <Link to="/checkout" className="card-footer-item">
-            Add
-          </Link>
-          <Link to={`/pizza/${pizzaId}`}>View</Link>
+          <button className="card-footer-item" onClick={addToCartHandler}>
+            ADD
+          </button>
         </footer>
       </div>
     </div>
   );
-};
+}
 
 export default Pizzas;
