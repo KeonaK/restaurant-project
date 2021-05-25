@@ -24,12 +24,14 @@ function Checkout() {
                     <strong>TOTAL</strong> (0) $
                   </p>
                 </div>
-                <button
-                  type="submit"
-                  className="button is-link is-fullwidth has-text-weight-medium is-medium"
-                >
-                  Checkout
-                </button>
+                <Link to="/card">
+                  <button
+                    type="submit"
+                    className="button is-link is-fullwidth has-text-weight-medium is-medium"
+                  >
+                    Checkout
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

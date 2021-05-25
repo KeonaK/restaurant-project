@@ -22,48 +22,38 @@ const PizzaView = ({ match, history }) => {
   };
 
   return (
-    <div>
+    <div className="pizzascreen">
       {loading ? (
         <h2>Loading...</h2>
       ) : error ? (
         <h2>{error}</h2>
       ) : (
-        <div>
-          <div className="card">
-            <header className="card-header">
-              <p className="card-header-title">{type}</p>
-            </header>
-            <div className="card-content">
-              <div className="content">
-                <p>Size:{size}</p>
-                <p>Toppings:{toppings}</p>
-                <p>Dough:{gluten}</p>
-                <p>${price}</p>
-                <p>
-                  Qty
-                  <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
-                </p>
-              </div>
+        <>
+          <div className="pizzascreen__left">
+            <div className="left__image">
+              <img src={pizza.imageUrl} alt={pizza.name} />
             </div>
-            <footer className="card-footer">
-              <Link to="/checkout" className="card-footer-item">
-                Add
-              </Link>
-              <Link to={`/pizza/${pizzaId}`}>View</Link>
-            </footer>
+            <div className="left__info">
+              <p className="left__name">{pizza.type}</p>
+              <p>Price: ${pizza.price}</p>
+              <p>Toppings: {pizza.toppings}</p>
+            </div>
           </div>
-        </div>
+          <div className="pizzascreen__right">
+            <div className="right__info">
+              <p>
+                Price:
+                <span>${pizza.price}</span>
+              </p>
+
+              <p>
+                <button type="button" onClick={addToCartHandler}>
+                  Add To Cart
+                </button>
+              </p>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );
