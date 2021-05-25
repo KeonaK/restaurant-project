@@ -1,8 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-
-function Ordering(props) {
-=======
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Pizzas from "../components/Pizzas";
@@ -19,28 +15,18 @@ function Ordering() {
   useEffect(() => {
     dispatch(listPizzas());
   }, [dispatch]);
->>>>>>> b60edfa9f42b4d90850c4bf5af895fad9ded152a
   return (
     <div>
       <section className="hero is-danger is-fullheight">
         <div className="hero-body">
           <div className="subtitle">Build your own</div>
 
-<<<<<<< HEAD
-          <div class="select is-normal">
-            <select>
-              <option>Pizza Size</option>
-              <option>12"</option>
-              <option>16"</option>
-              <option>18"</option>
-=======
           <div className="select is-normal">
             <select>
               <option>Pizza Size</option>
               <option value="12">12"</option>
               <option value="16">16"</option>
               <option value="18">18"</option>
->>>>>>> b60edfa9f42b4d90850c4bf5af895fad9ded152a
             </select>
           </div>
           <h4>Toppings</h4>
@@ -101,45 +87,6 @@ function Ordering() {
             Ground Beef
           </label>
 
-<<<<<<< HEAD
-          <div class="select is-normal">
-            <select>
-              <option>Cheese</option>
-              <option>Mozzarella</option>
-              <option>Goat Cheese</option>
-            </select>
-          </div>
-          <div class="select is-normal">
-            <select>
-              <option>Dough</option>
-              <option>Glutten</option>
-              <option>Glutten-Free</option>
-            </select>
-          </div>
-
-          <div className="subtitle">Chef's Selections</div>
-          <div className="card">
-            <header className="card-header">
-              <p className="card-header-title">{props.type}</p>
-              <button className="card-header-icon" aria-label="more options">
-                <span className="icon">
-                  <i className="fas fa-angle-down" aria-hidden="true" />
-                </span>
-              </button>
-            </header>
-            <div className="card-content">
-              <div className="content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus nec iaculis mauris.
-              </div>
-            </div>
-            <footer className="card-footer">
-              <a href="#" className="card-footer-item">
-                Add
-              </a>
-            </footer>
-          </div>
-=======
           <div className="select is-normal">
             <select>
               <option>Cheese</option>
@@ -156,7 +103,6 @@ function Ordering() {
           </div>
           <div className="subtitle">Chef's Selections</div>
           <Pizzas />
->>>>>>> b60edfa9f42b4d90850c4bf5af895fad9ded152a
         </div>
       </section>
     </div>

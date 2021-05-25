@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
-import Nav from "../src/components/Nav/index";
-import Landing from "../src/pages/Landing";
-import Ordering from "../src/pages/Ordering";
-import SignUp from "../src/pages/SignUp";
-import Login from "../src/pages/Login";
-import Checkout from "../src/pages/Checkout";
-import NoMatch from "../src/pages/NoMatch";
-import Footer from "../src/components/Footer";
-import Credit from "../src/components/Credit"
+import Nav from "./components/Nav/index";
+import Landing from "./pages/Landing";
+import Ordering from "./pages/Ordering";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import Checkout from "./pages/Checkout";
+import NoMatch from "./pages/NoMatch";
+import Footer from "./components/Footer";
+import Cards from "./components/Cards"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/order" component={Ordering} />
           <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/login" component={Login} />
-          <Rotue exact path="/credit" component={Credit} />
+          <Route exact path="/cards" component={Cards} />
           {/* <Route exact path="/checkout" component={Checkout} /> */}
           <Route exact path="/checkout" component={Checkout} />
           <Route component={NoMatch} />
