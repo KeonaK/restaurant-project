@@ -6,7 +6,7 @@ function Footer() {
       <footer className="footer">
         <div className="content has-text-centered">
           <p>
-            <strong>AL LEÑA PiZZERIA</strong> by{" "}
+            <strong>A LA LEÑA PiZZERIA</strong> by{" "}
             <a
               target="_blank"
               rel="noreferrer"
