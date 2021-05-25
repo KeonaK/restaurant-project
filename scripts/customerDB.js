@@ -15,6 +15,7 @@ const customerSeed = [
     name: "Greg Olson",
     cc:"xxx-xxx-xxxx" ,
     exp: "05/23",
+    cvc: "xxx",
     
     
     date: new Date(Date.now()),
@@ -23,19 +24,21 @@ const customerSeed = [
     name: "Scarlet Johanson",
     cc:"xxx-xxx-xxxx" ,
     exp: "12/31",
-    
+    cvc: "xxx",
     date: new Date(Date.now()),
   },
   {
     name: "Deion Sanders",
     cc:"xxx-xxx-xxxx" ,
     exp:"05/25",
+    cvc: "xxx",
     date: new Date(Date.now()),
   },
   {
     name: "Don Carlion",
     cc:"xxx-xxx-xxxx" ,
     exp:"11/24",
+    cvc: "xxx",
 
     
     date: new Date(Date.now()),
@@ -44,6 +47,7 @@ const customerSeed = [
     name: "Kamala Harris",
     cc:"xxx-xxx-xxxx" ,
     exp:"02/27",
+    cvc: "xxx",
     
     date: new Date(Date.now()),
   },
@@ -51,6 +55,7 @@ const customerSeed = [
     name: "Jimmy Carter ",
     cc:"xxx-xxx-xxxx" ,
     exp:"09/22",
+    cvc: "xxx",
     date: new Date(Date.now()),
   },
 ];
@@ -58,7 +63,7 @@ const customerSeed = [
 db.Post.remove({})
   .then(() => db.Post.collection.insertMany(customerSeed))
   .then((data) => {
-    console.log(data.result.n + "order inserted!");
+    console.log(data.result.n + "card inserted!");
     process.exit(0);
   })
   .catch((err) => {
