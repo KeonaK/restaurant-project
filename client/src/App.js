@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/order" component={Ordering} />
           <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/login" component={Login} />
-          {/* <Route exact path="/checkout" component={Checkout} /> */}
+          <Route exact path="/checkout" component={Checkout} />
           <Route component={NoMatch} />
         </Switch>
 
