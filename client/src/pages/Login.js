@@ -1,8 +1,29 @@
-import React from "react";
+import React, { Component } from "react";
+class Login extends Component {
+  constructor() {
+    super();
+    this.state = {
+      email: "",
+      password: "",
+      errors: {}
+    };
+  }
+onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+onSubmit = e => {
+    e.preventDefault();
+const userData = {
+      email: this.state.email,
+      password: this.state.password
+    };
+console.log(userData);
+  };
 
-function Login() {
+  render() {
+    const { errors } = this.state;
   return (
-    <form className="box">
+    <form className="box" noValidate onSubmit={this.onSubmit}>
       <div className="field">
         <label className="label">Email</label>
         <div className="control">
@@ -10,18 +31,27 @@ function Login() {
             className="input"
             type="email"
             placeholder="e.g. JaneDoe@example.com"
+            onChange={this.onChange}
+            value={this.state.email}
+            error={errors.email}
+            id="email"
+            type="email"
           />
         </div>
       </div>
       <div className="field">
         <label className="label">Password</label>
         <div className="control">
-          <input className="input" type="password" placeholder="********" />
+          <input className="input" type="password" placeholder="********"  onChange={this.onChange}
+                  value={this.state.password}
+                  error={errors.password}
+                  id="password"
+                  type="password" />
         </div>
       </div>
       <button className="button is-primary">Submit</button>
     </form>
   );
 }
-
+}
 export default Login;

@@ -10,8 +10,8 @@ import NoMatch from "./pages/NoMatch";
 import Footer from "./components/Footer";
 
 import Cards from "./components/Cards";
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
+
+import Login from "./pages/Login";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -83,7 +83,7 @@ function App() {
             </Route>
             <Route exact path="/sign-up" component={SignUp} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/register" component={Register} />
+          
             <Route exact path="/cards" component={Cards} />
             {/* <Route exact path="/checkout" component={Checkout} /> */}
             <Route exact path="/checkout">
