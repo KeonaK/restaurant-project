@@ -50,8 +50,14 @@ function Nav(props) {
                     />
                   </span>
                   <span>
-                    {props.countCartItems ? (
-                      <button>{props.countCartItems}</button>
+                    {props.cartItems.length ? (
+                      <button>
+                        {props.cartItems.reduce(
+                          (runningTotal, cartItem) =>
+                            runningTotal + cartItem.qty,
+                          0
+                        )}
+                      </button>
                     ) : (
                       ""
                     )}
