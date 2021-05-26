@@ -16,7 +16,19 @@ function Checkout(props) {
             <div className="column is-two-thirds has-text-left">
               <h1 className="title is-1">Your Order</h1>
               <Link to="/order"> ← Add more items</Link>
-              {props.cartItems.length === 0 && <div>Cart is empty</div>}
+              <div>
+                {props.cartItems.map((cartItem) => (
+                  //  <div key={cartItem.id}></div>
+                  <div>
+                    <hr></hr>
+                    <div>{cartItem.type}</div>
+                    <div>{cartItem.toppings}</div>
+                    <div>{cartItem.size}"</div>
+                    <div>${cartItem.price}</div>
+                    <hr></hr>
+                  </div>
+                ))}
+              </div>
 
               <p className="is-size-4"></p>
             </div>
@@ -26,15 +38,22 @@ function Checkout(props) {
                   {props.cartItems.map((cartItem) => (
                     <div key={cartItem.id}>
                       <div>{cartItem.type}</div>
+                      {/* <div>{cartItem.toppings}</div> */}
+                      <div>{cartItem.size}"</div>
+                      <div>${cartItem.price}</div>
+
                       <div>
-                        <button>-</button>{" "}
+                        <button onClick={() => props.removeFromCart(cartItem)}>
+                          -
+                        </button>{" "}
                         <button onClick={() => props.addToCart(cartItem)}>
                           +
                         </button>
                       </div>
+                      <hr></hr>
 
                       <div>
-                        {/* {cartItem.qty} x ${cartItem.price.toFixed(2)} */}
+                        {cartItem.qty} x ${cartItem.price.toFixed(2)}
                       </div>
                     </div>
                   ))}
