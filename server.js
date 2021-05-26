@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 const passport = require("passport");
 const users = require("./routes/api/users");
 // Define middleware here
@@ -22,8 +23,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/pizzaDB", {
   useCreateIndex: true,
   useUnifiedTopology: true,
 });
-// Bodyparser middleware
-// DB Config
+
 // Passport middleware
 app.use(passport.initialize());
 // Passport config

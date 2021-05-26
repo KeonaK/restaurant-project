@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import shoppingCart from "@iconify/icons-fa-solid/shopping-cart";
 
-function Nav() {
+function Nav(props) {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -12,7 +12,7 @@ function Nav() {
           <img src={logo} width="112" height="28" alt="logo" />
         </Link>
 
-        <a
+        {/* <a
           role="button"
           className="navbar-burger"
           aria-label="menu"
@@ -22,7 +22,7 @@ function Nav() {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </a> */}
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
@@ -49,7 +49,13 @@ function Nav() {
                       style={{ color: "black", fontSize: "20px" }}
                     />
                   </span>
-                  <span>0</span>
+                  <span>
+                    {props.countCartItems ? (
+                      <button>{props.countCartItems}</button>
+                    ) : (
+                      ""
+                    )}
+                  </span>
                 </span>
               </Link>
             </div>
