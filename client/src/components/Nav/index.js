@@ -4,7 +4,7 @@ import logo from "../../images/logo.png";
 import { Icon } from "@iconify/react";
 import shoppingCart from "@iconify/icons-fa-solid/shopping-cart";
 
-function Nav() {
+function Nav(props) {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -49,7 +49,13 @@ function Nav() {
                       style={{ color: "black", fontSize: "20px" }}
                     />
                   </span>
-                  <span>0</span>
+                  <span>
+                    {props.countCartItems ? (
+                      <button>{props.countCartItems}</button>
+                    ) : (
+                      ""
+                    )}
+                  </span>
                 </span>
               </Link>
             </div>
