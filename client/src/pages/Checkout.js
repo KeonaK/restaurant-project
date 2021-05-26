@@ -41,6 +41,9 @@ function Checkout(props) {
                       {/* <div>{cartItem.toppings}</div> */}
                       <div>{cartItem.size}"</div>
                       <div>${cartItem.price}</div>
+                      <div>
+                        {cartItem.qty} x ${cartItem.price.toFixed(2)}
+                      </div>
 
                       <div>
                         <button onClick={() => props.removeFromCart(cartItem)}>
@@ -50,13 +53,9 @@ function Checkout(props) {
                           +
                         </button>
                       </div>
-                      <hr></hr>
-
-                      <div>
-                        {cartItem.qty} x ${cartItem.price.toFixed(2)}
-                      </div>
                     </div>
                   ))}
+                  <hr></hr>
                 </div>
                 <div>
                   <p>Subtotal ${itemsPrice.toFixed(2)}</p>

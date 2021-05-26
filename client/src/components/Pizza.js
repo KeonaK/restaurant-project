@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import API from "../utils/API";
 
 export function Pizza({ addToCart, pizza }) {
   return (
