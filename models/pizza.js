@@ -7,7 +7,7 @@ const pizzaSchema = new Schema({
   toppings: { type: String, required: true },
   size: { type: Number, required: true },
   price: { type: Number, required: true },
-  gluten: { type: String },
+  gluten: { type: Boolean },
   date: { type: Date, default: Date.now },
 });
 
