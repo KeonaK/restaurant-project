@@ -9,7 +9,7 @@ import Checkout from "./pages/Checkout";
 import NoMatch from "./pages/NoMatch";
 import Footer from "./components/Footer";
 
-import Cards from "./components/Cards"
+import Cards from "./components/Cards";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import { Provider } from "react-redux";
@@ -33,12 +33,14 @@ function App() {
   }
 
   const addToCart = (pizza) => {
-    const pizzaInCart = cartItems.find((x) => x.id === pizza.id);
+    console.log(cartItems, pizza);
+    const pizzaInCart = cartItems.find((x) => x._id === pizza._id);
+    console.log(pizzaInCart);
     if (pizzaInCart) {
       setCartItems(
         //increase the qty
         cartItems.map((x) =>
-          x.id === pizza.id ? { ...pizzaInCart, qty: pizzaInCart.qty + 1 } : x
+          x._id === pizza._id ? { ...pizzaInCart, qty: pizzaInCart.qty + 1 } : x
         )
       );
     } else {
@@ -47,47 +49,58 @@ function App() {
     }
   };
 
+  const removeFromCart = (pizza) => {
+    const exist = cartItems.find((x) => x.id === pizza.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== pizza.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === pizza.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
+
   return (
     <Provider store={store}>
-    <Router>
-      <div>
-        <Nav
-          cartItems={cartItems}
-          setCartItems={setCartItems}
-          countCartItems={cartItems.length}
-        />
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/landing" component={Landing} />
-          <Route exact path="/restaurant-project" component={Landing} />
-          <Route exact path="/order">
-            <Ordering
-              cartItems={cartItems}
-              setCartItems={setCartItems}
-              pizzas={pizzas}
-              setPizzas={setPizzas}
-              addToCart={addToCart}
-            />
-          </Route>
-          <Route exact path="/sign-up" component={SignUp} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/cards" component={Cards} />
-          {/* <Route exact path="/checkout" component={Checkout} /> */}
-          <Route exact path="/checkout">
-            <Checkout
-              cartItems={cartItems}
-              setCartItems={setCartItems}
-              addToCart={addToCart}
-            />
-          </Route>
-          <Route component={NoMatch} />
-        </Switch>
+      <Router>
+        <div>
+          <Nav cartItems={cartItems} setCartItems={setCartItems} />
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/landing" component={Landing} />
+            <Route exact path="/restaurant-project" component={Landing} />
+            <Route exact path="/order">
+              <Ordering
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+                pizzas={pizzas}
+                setPizzas={setPizzas}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+              />
+            </Route>
+            <Route exact path="/sign-up" component={SignUp} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/cards" component={Cards} />
+            {/* <Route exact path="/checkout" component={Checkout} /> */}
+            <Route exact path="/checkout">
+              <Checkout
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+              />
+            </Route>
+            <Route component={NoMatch} />
+          </Switch>
 
-        <Footer />
-      </div>
-    </Router>
-   </Provider>
+          <Footer />
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
