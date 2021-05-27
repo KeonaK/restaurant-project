@@ -2,6 +2,12 @@ import axios from "axios";
 
 export default {
   // Gets all books
+  login: function (userData) {
+    return axios.post("/api/users/login", userData);
+  },
+  register: function (userData) {
+    return axios.post("/api/users/register", userData);
+  },
   getPizzas: function () {
     return axios.get("/api/pizzas");
   },

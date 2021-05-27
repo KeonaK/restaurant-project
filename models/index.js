@@ -1,3 +1,4 @@
 module.exports = {
-  Pizza: require("./pizza")
+  Pizza: require("./pizza"),
+  Customer: require("./customer")
 };
