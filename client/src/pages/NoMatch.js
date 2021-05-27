@@ -2,10 +2,10 @@ import React from "react";
 
 function NoMatch() {
   return (
-    <section class="hero is-danger is-fullheight">
-      <div class="hero-body">
-        <div class="">
-          <p class="title">404 Page Not Found</p>
+    <section className="hero has-background-danger-dark is-fullheight">
+      <div className="hero-body">
+        <div className="">
+          <p className="title">404...No pizza found here.</p>
         </div>
       </div>
     </section>

@@ -1,22 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
     <div>
-      <section className="hero  is-fullheight">
-        <div className="hero-body">
-          <div className="">
-            <p className="title">Welcome to A La Leña</p>
-            <p className="subtitle">
-              Try our tasty fire wood made pizza, heated to just the right
-              temperature in our brick style ovens.
-            </p>
-            <p>Log in or sign up to order online.</p>
-          </div>
+      <section className="hero__img">
+        <div className="center-content">
+          <h1 className="hero__title">Welcome to A La Leña</h1>
+          <h3 className="hero__subtitle">
+            {" "}
+            Try our tasty fire wood made pizza, heated to just the right
+            temperature in our brick style ovens.
+          </h3>
+          <Link to="/order" className="button checkout__button">
+            <strong>Order Online</strong>
+          </Link>
         </div>
       </section>
 
       <aside className="menu">
+        <h1>Menu</h1>
         <p className="menu-label">Build Your Pizza</p>
         <ul className="menu-list">
           <li>
