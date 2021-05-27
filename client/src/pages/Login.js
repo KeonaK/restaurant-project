@@ -23,7 +23,7 @@ console.log(userData);
   render() {
     const { errors } = this.state;
   return (
-    <form className="box" noValidate onSubmit={this.onSubmit}>
+    <form className="box" >
       <div className="field">
         <label className="label">Email</label>
         <div className="control">
@@ -49,7 +49,7 @@ console.log(userData);
                   type="password" />
         </div>
       </div>
-      <button className="button is-primary">Submit</button>
+      <button className="button is-primary" noValidate onSubmit={this.onSubmit}>Submit</button>
     </form>
   );
 }
