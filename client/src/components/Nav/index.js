@@ -1,18 +1,23 @@
 import React from "react";
+import "../../App.css";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo.svg";
 import { Icon } from "@iconify/react";
 import shoppingCart from "@iconify/icons-fa-solid/shopping-cart";
 
 function Nav(props) {
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav
+      className="navbar is-spaced"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
           <img src={logo} width="112" height="28" alt="logo" />
         </Link>
 
-        {/* <a
+        <div
           role="button"
           className="navbar-burger"
           aria-label="menu"
@@ -22,7 +27,7 @@ function Nav(props) {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a> */}
+        </div>
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
@@ -35,23 +40,23 @@ function Nav(props) {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <Link className="button is-primary" to="/login">
-                <strong>My account</strong>
+              <Link className="button " to="/login">
+                <strong>Log in</strong>
               </Link>
-              <Link className="button is-light" to="/sign-up">
-                Create account
+              <Link className="button " to="/sign-up">
+                <strong>Create account</strong>
               </Link>
               <Link to="/checkout">
                 <span className="icon-text ">
                   <span className="icon">
                     <Icon
                       icon={shoppingCart}
-                      style={{ color: "black", fontSize: "20px" }}
+                      style={{ color: "black", fontSize: "30px" }}
                     />
                   </span>
                   <span>
                     {props.cartItems.length ? (
-                      <button>
+                      <button className="cart">
                         {props.cartItems.reduce(
                           (runningTotal, cartItem) =>
                             runningTotal + cartItem.qty,

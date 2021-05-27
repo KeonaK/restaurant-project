@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+.button {
+  border: 2px solid hsl(348, 86%, 43%);
+  color: hsl(348, 86%, 43%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button:hover,
+.checkout__button:hover {
+  background-color: hsl(348, 86%, 43%);
+  border-color: hsl(348, 86%, 43%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.checkout__button {
+  width: 25.5rem;
+  margin: 4rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkout__border {
+  border: none;
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+    0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+.cart {
+  border: 2px solid hsl(348, 86%, 43%);
+  border-radius: 50%;
+}
+
+a {
+  color: hsl(348, 86%, 43%);
+}
+
+.navbar-item img {
+  max-height: none;
+}
+
+.order__button {
+  border: 2px solid white;
+}
+.order__button:hover {
+  border: 2px solid white;
+  color: black;
+  background-color: white;
 }

@@ -6,10 +6,10 @@ export function Pizza({ addToCart, pizza }) {
     <div>
       <div className="card">
         <header className="card-header">
-          <p className="card-header-title">{pizza.type}</p>
+          <p className="card-header-title ">{pizza.type}</p>
         </header>
-        <div className="card-content">
-          <div className="content">
+        <div className="card-content ">
+          <div className="content ">
             <p>Size:{pizza.size}</p>
             <p>Toppings:{pizza.toppings}</p>
             <p>Dough:{pizza.gluten}</p>
@@ -18,11 +18,8 @@ export function Pizza({ addToCart, pizza }) {
         </div>
         <footer className="card-footer">
           <Link to="/checkout">
-            <button
-              onClick={() => addToCart(pizza)}
-              className="button is-primary"
-            >
-              ADD
+            <button onClick={() => addToCart(pizza)} className="button ">
+              Add
             </button>
           </Link>
         </footer>

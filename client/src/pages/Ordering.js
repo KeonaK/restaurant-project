@@ -5,9 +5,9 @@ import Pizza from "../components/Pizza";
 function Ordering(props) {
   return (
     <div>
-      <section className="section has-background-danger-dark has-text-primary-light is-medium">
+      <section className="section has-background-danger-dark has-text-white is-medium">
         <div>
-          <div className="subtitle has-text-primary-light">Build your own</div>
+          <div className="subtitle has-text-white ">Build your own</div>
           <div className="field is-grouped">
             <div className="select is-normal">
               <select>
@@ -89,11 +89,11 @@ function Ordering(props) {
               Ground Beef
             </label>
             <p className="control">
-              <button className="button is-primary">Add</button>
+              <button className=" button order__button ">Add</button>
             </p>
           </div>
-          <div className="subtitle has-text-primary-light">
-            Chef's Selections
+          <div className="subtitle has-text-white ">
+            Chef's Brick Oven Pizzas
           </div>
           <div>
             {props.pizzas.map((pizza) => (

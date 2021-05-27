@@ -13,7 +13,7 @@ function Checkout(props) {
       <div className="hero-body">
         <div className="container has-text-centered">
           <div className="columns is-8 is-variable ">
-            <div className="column is-two-thirds has-text-left">
+            <div className="column checkout__border is-two-thirds has-text-left">
               <h1 className="title is-1">Your Order</h1>
               <Link to="/order"> ← Add more items</Link>
               <div>
@@ -21,7 +21,9 @@ function Checkout(props) {
                   //  <div key={cartItem.id}></div>
                   <div>
                     <hr></hr>
-                    <div>{cartItem.type}</div>
+                    <div>
+                      <strong>{cartItem.type}</strong>
+                    </div>
                     <div>{cartItem.toppings}</div>
                     <div>{cartItem.size}"</div>
                     <div>${cartItem.price}</div>
@@ -32,12 +34,14 @@ function Checkout(props) {
 
               <p className="is-size-4"></p>
             </div>
-            <div className="column is-one-third has-text-left">
+            <div className="column checkout__border  is-one-third has-text-left">
               <div className="control">
                 <div>
                   {props.cartItems.map((cartItem) => (
                     <div key={cartItem.id}>
-                      <div>{cartItem.type}</div>
+                      <div>
+                        <strong>{cartItem.type}</strong>
+                      </div>
                       {/* <div>{cartItem.toppings}</div> */}
                       <div>{cartItem.size}"</div>
                       <div>${cartItem.price}</div>
@@ -46,10 +50,16 @@ function Checkout(props) {
                       </div>
 
                       <div>
-                        <button onClick={() => props.removeFromCart(cartItem)}>
+                        <button
+                          className="cart"
+                          onClick={() => props.removeFromCart(cartItem)}
+                        >
                           -
                         </button>{" "}
-                        <button onClick={() => props.addToCart(cartItem)}>
+                        <button
+                          className="cart"
+                          onClick={() => props.addToCart(cartItem)}
+                        >
                           +
                         </button>
                       </div>
@@ -66,11 +76,8 @@ function Checkout(props) {
                 </div>
 
                 <Link to="/cards">
-                  <button
-                    type="submit"
-                    className="button is-link is-fullwidth has-text-weight-medium is-medium"
-                  >
-                    Checkout
+                  <button type="submit" className=" button checkout__button">
+                    <strong>Checkout</strong>
                   </button>
                 </Link>
               </div>
