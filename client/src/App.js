@@ -50,13 +50,13 @@ function App() {
   };
 
   const removeFromCart = (pizza) => {
-    const exist = cartItems.find((x) => x.id === pizza.id);
-    if (exist.qty === 1) {
-      setCartItems(cartItems.filter((x) => x.id !== pizza.id));
+    const pizzaInCart = cartItems.find((x) => x._id === pizza._id);
+    if (pizzaInCart.qty === 1) {
+      setCartItems(cartItems.filter((x) => x._id !== pizza._id));
     } else {
       setCartItems(
         cartItems.map((x) =>
-          x.id === pizza.id ? { ...exist, qty: exist.qty - 1 } : x
+          x._id === pizza._id ? { ...pizzaInCart, qty: pizzaInCart.qty - 1 } : x
         )
       );
     }
