@@ -16,7 +16,7 @@ const pizzaSeed = [
     toppings: "Traditional sauce, mozzarella cheese ",
     size: 12,
     price: 8,
-    gluten: gluten,
+    gluten: true,
     date: new Date(Date.now()),
   },
   {
@@ -25,7 +25,7 @@ const pizzaSeed = [
       "Traditional sauce, mozzarella cheese, italian sausage, ham, bacon, and pepperoni  ",
     size: 12,
     price: 10,
-    gluten: gluten,
+    gluten: true,
     date: new Date(Date.now()),
   },
   {
@@ -33,7 +33,7 @@ const pizzaSeed = [
     toppings: "Spinach",
     size: 12,
     price: 20,
-    gluten: gluten - free,
+    gluten: false,
     date: new Date(Date.now()),
   },
   {
@@ -42,7 +42,7 @@ const pizzaSeed = [
       "White sauce, mozzarella cheese, chicken, minced garlic, basil, and  onions",
     size: 12,
     price: 10,
-    gluten: gluten,
+    gluten: true,
     date: new Date(Date.now()),
   },
   {
@@ -51,7 +51,7 @@ const pizzaSeed = [
       "Traditional sauce, fresh mozzarella, sun dried tomatoes, canadian bacon, and black olives",
     size: 12,
     price: 20,
-    gluten: gluten,
+    gluten: true,
     date: new Date(Date.now()),
   },
   {
@@ -60,7 +60,7 @@ const pizzaSeed = [
       "Pesto sauce, goat cheese, spinach, bell peppers, and ground beef",
     size: 12,
     price: 12,
-    gluten: gluten,
+    gluten: true,
     date: new Date(Date.now()),
   },
 ];

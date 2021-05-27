@@ -9,7 +9,9 @@
     "server": "nodemon server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "seed": "node scripts/seedDB.js",
+    "seed": "node scripts/customerDB.js",
+    "seed2": "node scripts/seedDB.js",
+    
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
