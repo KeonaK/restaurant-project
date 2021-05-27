@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Cards from "react-credit-cards";
 import "./style.css";
-import "react-credit-cards/es/styles-compiled.css"
+import "react-credit-cards/es/styles-compiled.css";
 
 function App() {
   const [number, setNumber] = useState("");

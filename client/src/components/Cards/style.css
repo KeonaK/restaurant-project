@@ -1,12 +1,9 @@
-input{
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: black;
-    background-color: orange;
-    background-clip: padding-box;
-    border: 1px;
-    border-radius: .25rem;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-
+input {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+  border: 2px solid hsl(348, 86%, 43%);
+  background-clip: padding-box;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
