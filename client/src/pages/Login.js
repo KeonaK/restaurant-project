@@ -66,8 +66,12 @@ class Login extends Component {
             />
           </div>
         </div>
-        <Link to="/order" className="button ">
+
+        <button type="submit" className="button ">
           Submit
+        </button>
+        <Link to="/order" className="button">
+          Order Online
         </Link>
       </form>
     );

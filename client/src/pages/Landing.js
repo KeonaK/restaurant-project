@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
+import pizzaIcon from "@iconify/icons-twemoji/pizza";
 
 function Landing() {
   return (
@@ -19,11 +21,12 @@ function Landing() {
       </section>
 
       <aside className="menu">
-        <h1>Menu</h1>
-        <p className="menu-label">Build Your Own</p>
+        <h1 className="title">Menu</h1>
+        <hr />
+        <p className="subtitle">Build Your Own</p>
         <ul className="menu-list">
           <li>
-            <p>Size</p>
+            <p>Sizes</p>
             <ul type="disc">12″ / 16″ / 18″</ul>
           </li>
           <li>
@@ -39,26 +42,23 @@ function Landing() {
             </ul>
           </li>
           <li>
-            <p>Chesses</p>
-            <ul type="disc"> Mozzarella Goat Cheese</ul>
+            <p>Cheeses</p>
+            <ul type="disc"> Mozzarella and Goat Cheese</ul>
           </li>
         </ul>
-        <p className="menu-label">Chef's Brick Oven Pizzas</p>
+        <p className="subtitle">Chef's Brick Oven Pizzas</p>
       </aside>
       <div className="card">
         <div className="card-content">
           <div className="media">
             <div className="media-left">
-              <figure className="image is-48x48">
-                <img
-                  src="https://bulma.io/images/placeholders/96x96.png"
-                  alt="Placeholder "
-                />
-              </figure>
+              <Icon icon={pizzaIcon} style={{ fontSize: "20px" }} />
             </div>
             <div className="media-content">
-              <p className="title is-4">The Kirby </p>
-              <p className="subtitle is-6">
+              <p className="is-4">
+                <strong>The Kirby </strong>
+              </p>
+              <p className=" is-6">
                 White sauce, mozzarella cheese, chicken, minced garlic, basil,
                 and onions
               </p>
@@ -68,16 +68,13 @@ function Landing() {
         <div className="card-content">
           <div className="media">
             <div className="media-left">
-              <figure className="image is-48x48">
-                <img
-                  src="https://bulma.io/images/placeholders/96x96.png"
-                  alt="Placeholder "
-                />
-              </figure>
+              <Icon icon={pizzaIcon} style={{ fontSize: "20px" }} />
             </div>
             <div className="media-content">
-              <p className="title is-4">The Claytonator</p>
-              <p className="subtitle is-6">
+              <p className=" is-4">
+                <strong>The Claytonator</strong>
+              </p>
+              <p className=" is-6">
                 Traditional sauce, fresh mozzarella, sun dried tomatoes,
                 canadian bacon, and black olives
               </p>
@@ -87,16 +84,13 @@ function Landing() {
         <div className="card-content">
           <div className="media">
             <div className="media-left">
-              <figure className="image is-48x48">
-                <img
-                  src="https://bulma.io/images/placeholders/96x96.png"
-                  alt="Placeholder "
-                />
-              </figure>
+              <Icon icon={pizzaIcon} style={{ fontSize: "20px" }} />
             </div>
             <div className="media-content">
-              <p className="title is-4">Pesto Westo</p>
-              <p className="subtitle is-6">
+              <p className=" is-4">
+                <strong>Pesto Westo</strong>
+              </p>
+              <p className=" is-6">
                 Pesto sauce, goat cheese, spinach, bell peppers, and ground beef
               </p>
             </div>
@@ -105,34 +99,26 @@ function Landing() {
         <div className="card-content">
           <div className="media">
             <div className="media-left">
-              <figure className="image is-48x48">
-                <img
-                  src="https://bulma.io/images/placeholders/96x96.png"
-                  alt="Placeholder "
-                />
-              </figure>
+              <Icon icon={pizzaIcon} style={{ fontSize: "20px" }} />
             </div>
             <div className="media-content">
-              <p className="title is-4">Cheese</p>
-              <p className="subtitle is-6">
-                Traditional sauce, mozzarella cheese{" "}
+              <p className=" is-4">
+                <strong>Cheese</strong>
               </p>
+              <p className=" is-6">Traditional sauce, mozzarella cheese </p>
             </div>
           </div>
         </div>
         <div className="card-content">
           <div className="media">
             <div className="media-left">
-              <figure className="image is-48x48">
-                <img
-                  src="https://bulma.io/images/placeholders/96x96.png"
-                  alt="Placeholder "
-                />
-              </figure>
+              <Icon icon={pizzaIcon} style={{ fontSize: "20px" }} />
             </div>
             <div className="media-content">
-              <p className="title is-4">Meat Lover</p>
-              <p className="subtitle is-6">
+              <p className="is-4">
+                <strong>Meat Lover</strong>
+              </p>
+              <p className=" is-6">
                 Traditional sauce, mozzarella cheese, italian sausage, ham,
                 bacon, and pepperoni
               </p>
@@ -142,16 +128,13 @@ function Landing() {
         <div className="card-content">
           <div className="media">
             <div className="media-left">
-              <figure className="image is-48x48">
-                <img
-                  src="https://bulma.io/images/placeholders/96x96.png"
-                  alt="Placeholder "
-                />
-              </figure>
+              <Icon icon={pizzaIcon} style={{ fontSize: "20px" }} />
             </div>
             <div className="media-content">
-              <p className="title is-4">Vegan</p>
-              <p className="subtitle is-6">Spinach</p>
+              <p className=" is-4">Vegan</p>
+              <p className=" is-6">
+                <strong>Spinach</strong>
+              </p>
             </div>
           </div>
         </div>

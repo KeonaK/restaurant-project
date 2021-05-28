@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import API from "../utils/API";
 
 class SignUp extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       name: "",
       email: "",
@@ -109,9 +108,9 @@ class SignUp extends Component {
             />
           </div>
         </div>
-        <Link className="button" type="submit" to="/order">
+        <button className="button" type="submit">
           Submit
-        </Link>
+        </button>
       </form>
     );
   }
