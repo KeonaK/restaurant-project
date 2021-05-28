@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import register from "../../../validation/register";
-import API from "../utils/API"
+import { Link } from "react-router-dom";
+import API from "../utils/API";
 
 class SignUp extends Component {
   constructor() {
@@ -28,28 +28,26 @@ class SignUp extends Component {
       password: this.state.password,
       password2: this.state.password2,
     };
-    if (newUser.name && newUser.email && newUser.password && newUser.password2){
+    if (
+      newUser.name &&
+      newUser.email &&
+      newUser.password &&
+      newUser.password2
+    ) {
       API.register({
-        
         name: newUser.name,
         email: newUser.email,
         password: newUser.password,
         password2: newUser.password2,
-
-      })
-      .then(res => API.register())
+      }).then((res) => this.props.setToken(res.data.token));
     }
-    
-    
-    
-    
-    
+
     console.log(newUser);
   };
   render() {
     const { errors } = this.state;
     return (
-      <form className="box">
+      <form className="box" onSubmit={this.onSubmit}>
         <div className="field">
           <label className="label">Name</label>
           <div className="control">
@@ -62,7 +60,6 @@ class SignUp extends Component {
               value={this.state.name}
               error={errors.name}
               id="name"
-          
             />
           </div>
         </div>
@@ -79,7 +76,6 @@ class SignUp extends Component {
               value={this.state.email}
               error={errors.email}
               id="email"
-             
             />
           </div>
         </div>
@@ -95,7 +91,6 @@ class SignUp extends Component {
               value={this.state.password}
               error={errors.password}
               id="password"
-             
             />
           </div>
         </div>
@@ -111,18 +106,12 @@ class SignUp extends Component {
               value={this.state.password2}
               error={errors.password2}
               id="password2"
-             
             />
           </div>
         </div>
-        <button
-          className="button is-primary"
-          type="submit"
-          noValidate
-          onSubmit={this.onSubmit}
-        >
+        <Link className="button" type="submit" to="/order">
           Submit
-        </button>
+        </Link>
       </form>
     );
   }

@@ -20,7 +20,7 @@ function Landing() {
 
       <aside className="menu">
         <h1>Menu</h1>
-        <p className="menu-label">Build Your Pizza</p>
+        <p className="menu-label">Build Your Own</p>
         <ul className="menu-list">
           <li>
             <p>Size</p>
