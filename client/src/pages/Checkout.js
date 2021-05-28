@@ -18,7 +18,6 @@ function Checkout(props) {
               <Link to="/order"> ← Add more items</Link>
               <div>
                 {props.cartItems.map((cartItem) => (
-                  //  <div key={cartItem.id}></div>
                   <div>
                     <hr></hr>
                     <div>
